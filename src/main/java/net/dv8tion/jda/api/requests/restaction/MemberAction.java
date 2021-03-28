@@ -95,7 +95,7 @@ public interface MemberAction extends RestAction<Void>
      *         The nickname, or {@code null}
      *
      * @throws IllegalArgumentException
-     *         If the provided nickname is longer than 32 characters
+     *         If the provided nickname is longer than 32 code points
      *
      * @return The current MemberAction for chaining
      */

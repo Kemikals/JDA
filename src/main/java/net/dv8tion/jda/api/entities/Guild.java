@@ -802,7 +802,7 @@ public interface Guild extends ISnowflake
     /**
      * Searches for a {@link net.dv8tion.jda.api.entities.Member} that has the matching Discord Tag.
      * <br>Format has to be in the form {@code Username#Discriminator} where the
-     * username must be between 2 and 32 characters (inclusive) matching the exact casing and the discriminator
+     * username must be between 2 and 32 code points (inclusive) matching the exact casing and the discriminator
      * must be exactly 4 digits.
      * <br>This does not check the {@link net.dv8tion.jda.api.entities.Member#getNickname() nickname} of the member
      * but the username.
@@ -834,7 +834,7 @@ public interface Guild extends ISnowflake
     /**
      * Searches for a {@link net.dv8tion.jda.api.entities.Member} that has the matching Discord Tag.
      * <br>Format has to be in the form {@code Username#Discriminator} where the
-     * username must be between 2 and 32 characters (inclusive) matching the exact casing and the discriminator
+     * username must be between 2 and 32 code points (inclusive) matching the exact casing and the discriminator
      * must be exactly 4 digits.
      * <br>This does not check the {@link net.dv8tion.jda.api.entities.Member#getNickname() nickname} of the member
      * but the username.

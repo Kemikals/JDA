@@ -588,7 +588,7 @@ public interface ShardManager
     /**
      * Searches for the first user that has the matching Discord Tag.
      * <br>Format has to be in the form {@code Username#Discriminator} where the
-     * username must be between 2 and 32 characters (inclusive) matching the exact casing and the discriminator
+     * username must be between 2 and 32 code points (inclusive) matching the exact casing and the discriminator
      * must be exactly 4 digits.
      *
      * <p>This will only check cached users!
@@ -619,7 +619,7 @@ public interface ShardManager
     /**
      * Searches for the first user that has the matching Discord Tag.
      * <br>Format has to be in the form {@code Username#Discriminator} where the
-     * username must be between 2 and 32 characters (inclusive) matching the exact casing and the discriminator
+     * username must be between 2 and 32 code points (inclusive) matching the exact casing and the discriminator
      * must be exactly 4 digits.
      *
      * <p>This will only check cached users!

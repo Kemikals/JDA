@@ -120,7 +120,7 @@ public interface User extends IMentionable, IFakeable
     }
 
     /**
-     * The username of the {@link net.dv8tion.jda.api.entities.User User}. Length is between 2 and 32 characters (inclusive).
+     * The username of the {@link net.dv8tion.jda.api.entities.User User}. Length is between 2 and 32 code points (inclusive).
      *
      * @throws UnsupportedOperationException
      *         If this User was created with {@link #fromId(long)}

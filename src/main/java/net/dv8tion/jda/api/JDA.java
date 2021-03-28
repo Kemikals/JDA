@@ -607,7 +607,7 @@ public interface JDA
     /**
      * Searches for a user that has the matching Discord Tag.
      * <br>Format has to be in the form {@code Username#Discriminator} where the
-     * username must be between 2 and 32 characters (inclusive) matching the exact casing and the discriminator
+     * username must be between 2 and 32 code points (inclusive) matching the exact casing and the discriminator
      * must be exactly 4 digits.
      *
      * <p>This only checks users that are known to the currently logged in account (shard). If a user exists
@@ -638,7 +638,7 @@ public interface JDA
     /**
      * Searches for a user that has the matching Discord Tag.
      * <br>Format has to be in the form {@code Username#Discriminator} where the
-     * username must be between 2 and 32 characters (inclusive) matching the exact casing and the discriminator
+     * username must be between 2 and 32 code points (inclusive) matching the exact casing and the discriminator
      * must be exactly 4 digits.
      *
      * <p>This only checks users that are known to the currently logged in account (shard). If a user exists
@@ -663,7 +663,7 @@ public interface JDA
         Checks.notNull(username, "Username");
         Checks.notNull(discriminator, "Discriminator");
         Checks.check(discriminator.length() == 4 && Helpers.isNumeric(discriminator), "Invalid format for discriminator!");
-        Checks.check(username.length() >= 2 && username.length() <= 32, "Username must be between 2 and 32 characters in length!");
+        Checks.check(username.length() >= 2 && username.codePoints().count() <= 32, "Username must be between 2 and 32 code points in length!");
         return getUserCache().applyStream(stream ->
             stream.filter(it -> it.getDiscriminator().equals(discriminator))
                   .filter(it -> it.getName().equals(username))
